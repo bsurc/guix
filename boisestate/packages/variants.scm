@@ -5,7 +5,9 @@
   #:use-module (guix utils))
 
 (define-public openblas-omp
-  (package (inherit openblas)
+  (package
+    (inherit openblas)
+    (name "openblas-omp")
     (arguments
      (list
       #:test-target "test"
