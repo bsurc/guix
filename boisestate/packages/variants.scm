@@ -1,11 +1,11 @@
-(use-modules (gnu packages maths)
-             (guix gexp)
-             (guix packages)
-             (guix utils))
+(define-module (boisestate packages variants)
+  #:use-module (gnu packages maths)
+  #:use-module (guix gexp)
+  #:use-module (guix packages)
+  #:use-module (guix utils))
 
-(define openblas-omp
-  (package
-    (inherit openblas)
+(define-public openblas-omp
+  (package (inherit openblas)
     (arguments
      (list
       #:test-target "test"
@@ -65,4 +65,4 @@
       ;                              ((#:make-flags '())
       ;`(cons "USE_OPENMP=1" ,flags))))))
 
-openblas-omp
+;openblas-omp
